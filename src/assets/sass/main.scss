@@ -1,0 +1,121 @@
+// 初始化
+* {
+    // box-sizing: border-box;
+    // transition: width 2s;
+    // -moz-transition: width 2s;
+    // -webkit-transition: width 2s;
+    // -o-transition: width 2s;
+}
+
+body {
+    @extend .font-size4;
+    font-family: "PingFangSC-Regular", "microsoft yahei", "Arial"!important;
+    background-color: #f6f6f6;
+}
+
+input,
+{
+    outline: none;
+}
+
+button {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+i {
+    display: inline-block;
+    font-style: normal;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+    background: none;
+}
+
+// 图标
+// $theicons: (truck, 60, 60),
+// (halfstar, 24, 24),
+// (enter, 50, 50);
+// @each $icon,
+// $width,
+// $height in $theicons {
+//     .theicon-#{$icon} {
+//         display: inline-block;
+//         width: ($width / 2)px;
+//         height: ($height / 2)px;
+//         background: url(../images/Sep18_init/icon_#{$icon}.png) no-repeat;
+//         background-size: 100% 100%;
+//     }
+// }
+
+.icon-loading {
+    margin-left: 5px;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    border: 3px solid #999;
+    border-bottom-color: transparent;
+    vertical-align: middle;
+    -webkit-animation: rotate 0.75s linear infinite;
+    animation: rotate 0.75s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+//kk新增
+.arrow-right {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px
+}
+
+.van-icon {
+    font-family: vant-icon !important;
+}
+
+.border-top-slim {
+    border-top: 1px solid $color-border;
+}
+.min-height100 {
+    min-height:  100vh;
+}
+
+.min-height100_has_bottom_60 {
+    min-height: 607px;
+}
+
+input::-webkit-input-placeholder {
+    color: #cdcdcd
+}
+
+img {
+    content: normal !important;
+}
+
+body * {
+    max-height: 999999px;
+}

@@ -1,0 +1,23 @@
+// 本项目色值
+$color-theme:#32ae57;
+$color-orange: #FF7B35;
+$color-gray: #CDCDCD;
+$color-blue-light:#EFFAF3;
+$color-orange-light: #FFefe5;
+$colors: (theme, $color-theme),
+(orange, $color-orange),
+(gray, $color-gray),
+(ddd, #ddd),
+(blue-light, $color-blue-light),
+(orange-light, $color-orange-light),
+(f6, #f6f6f6),
+(D6FAFF,#D6FAFF);
+@each $name,
+$color in $colors {
+    .color-#{$name} {
+        color: $color;
+    }
+    .bgcolor-#{$name} {
+        background-color: $color;
+    }
+}
