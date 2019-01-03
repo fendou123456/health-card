@@ -7,4 +7,6 @@ export const apis = {
     getGraphicVerificationCode: mobileUrl + '/interface-service-bdcard/getGraphicVerificationCode',//获取图形验证码接口
     getSmsVerificationCode: mobileUrl + '/interface-service-bdcard/getSmsVerificationCode',//获取短信验证码接口
     getnation: mobileUrl +'/interface-service-dictionaries/nation',//民族
+    authorize: mobileUrl +'/interface-service-bdcard/authorize',//获取授权,扫码获取token
+    removecard: mobileUrl +'/interface-service-bdcard/remove',//解绑卡
 }

@@ -1,12 +1,12 @@
 <template>
-    <div class="bgimg margin-top28 ">
+    <div class="bgimg margin-top28 " @click="go">
         <div class="color-D6FAFF  text-align-center font-size4 padding-top28 padding-bottom20">山东省电子健康卡</div>
         <div class="flex-spacebetween margin-top64">
             <div class="color-white margin-left40">
                 <div><span class="opacity_7 margin-right20 line-limited break-all">姓名</span><span>{{data.name}}</span></div>
                 <div class="margin-top24"><span class="opacity_7 margin-right20">身份证号码</span><span>{{idcardchange}}</span></div>
             </div>
-            <div class="qrcodeimg itemflex-00auto margin-right60 margin-left102" v-if="ifqrcode" @click="go"></div>
+            <div class="qrcodeimg itemflex-00auto margin-right60 margin-left102" v-if="ifqrcode" ></div>
         </div>
         <!-- <div class="font-size-4 opacity_6 text-align-center margin-top44" style="color:#A0F4FF" >- 温馨提示：健康卡目前不支持医保 -</div> -->
     </div>
@@ -56,7 +56,7 @@
         methods:{
              go(){
                  this.$cache.set('cardNumber',JSON.stringify(this.data))
-                 this.$router.push({path:'/code'})
+                 this.$router.push({path:'/codeAndUnbind'})
              }
         },
         mounted(){

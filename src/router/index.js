@@ -32,6 +32,42 @@ export default new Router({
             title: '码信息',
             keepAlive: false
         }
+    },
+    {
+        path: '/codeAndUnbind',
+        name: 'codeAndUnbind',
+        component: lazyload('codeAndUnbind'),
+        meta: {
+            title: '健康卡申请',
+            keepAlive: false
+        }
+    },
+    {
+        path: '/myCardList',
+        name: 'myCardList',
+        component: lazyload('myCardList'),
+        meta: {
+            title: '我的健康卡',
+            keepAlive: false
+        }
+    },
+    {
+        path: '/success',
+        name: 'success',
+        component: lazyload('success'),
+        meta: {
+            title: '我的健康卡',
+            keepAlive: false
+        }
+    },
+    {
+        path: '/fail',
+        name: 'fail',
+        component: lazyload('fail'),
+        meta: {
+            title: '我的健康卡',
+            keepAlive: false
+        }
     }
   ]
 })
