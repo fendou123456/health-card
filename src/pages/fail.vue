@@ -5,7 +5,7 @@
         <div class="text-align-center color-666 margin-top20">请使用您的健康卡业务</div>
         <div class="width100 fixed bottom0 flex-align-spacearound padding16X bgcolor-white">
             <van-button type="default" class="width50 margin-left30" @click="$router.go(-1)" >返回</van-button>
-            <van-button type="custom" class="width50 margin-left30 margin-right30">重新扫描</van-button>
+            <van-button type="custom" class="width50 margin-left30 margin-right30"  @click="scanCode" >重新扫描</van-button>
         </div> 
     </div>
 </template>
@@ -14,6 +14,7 @@
 </style>
 <script>
     import failurl from '@/assets/image/error.png'
+    import { getjsSign , scanCode, wxConfig} from '@/utils/scanCode.js'
     export default {
         data(){
            return {
@@ -24,10 +25,10 @@
 
         },
         methods:{
-
+            scanCode
         },
         mounted(){
-
+            getjsSign()
         },
         created(){
 

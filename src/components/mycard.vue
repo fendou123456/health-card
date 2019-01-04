@@ -48,10 +48,26 @@
             },
             touchendcolor(){
                 this.touchFlag=false;
-                // this.$router.push({path:'/success'})
-                // this.$router.push({path:'/fail'})
-                this.$router.push({path:'/codeAndUnbind'})
-            }
+                this.getauthorize()
+            },
+            getauthorize(){
+                this.$post({
+                    url:this.$apis.authorize,
+                    isLoading:true,
+                    param:{
+                        userId:this.$cache.get(this.$cacheKey.userId),
+                        openId:this.$cache.get(this.$cacheKey.openId),
+                        hospitalId:this.$cache.get(this.$cacheKey.hospitalId),
+                        projectId:this.$cache.get(this.$cacheKey.projectId),
+                        token:this.$cache.get(this.$cacheKey.token),
+                        id:this.data.id
+                    }
+                }).then(res =>{
+                    this.$router.push({path:'/success'})
+                },err =>{
+                    this.$router.push({path:'/fail'})
+                })
+            },
         },
         mounted(){
 

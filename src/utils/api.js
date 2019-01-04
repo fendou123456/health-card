@@ -9,4 +9,5 @@ export const apis = {
     getnation: mobileUrl +'/interface-service-dictionaries/nation',//民族
     authorize: mobileUrl +'/interface-service-bdcard/authorize',//获取授权,扫码获取token
     removecard: mobileUrl +'/interface-service-bdcard/remove',//解绑卡
+    getjsSign: mobileUrl +'/interface-service-dictionaries/jsSign',//获取微信签名
 }

@@ -13,7 +13,8 @@ export const cacheKey = {
     openId:'openId',
     hospitalId:'hospitalId',
     projectId:'projectId',
-    cardNumber:'cardNumber'
+    cardNumber:'cardNumber',
+    token:'token'
 }
 
 export const cache = {

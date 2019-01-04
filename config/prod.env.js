@@ -5,14 +5,14 @@ if (target == 'product') {
     obj = {
         NODE_ENV: '"production"',
         URL: JSON.stringify({
-            mobile: 'https://xpeng80.zwjk.com',
+            mobile: 'https://xpeng90.zwjk.com',
         })
     }
 } else if (target == 'pre') {
     obj = {
         NODE_ENV: '"production"',
         URL: JSON.stringify({
-            mobile: 'https://xpeng80.zwjk.com',
+            mobile: 'https://xpeng90.zwjk.com',
         })
     }
 } else if (target == 'test') {

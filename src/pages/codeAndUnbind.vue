@@ -89,8 +89,9 @@
                         openId:this.$cache.get(this.$cacheKey.openId),
                         hospitalId:this.$cache.get(this.$cacheKey.hospitalId),
                         projectId:this.$cache.get(this.$cacheKey.projectId),
-                        idCardType:data.idCardType,
-                        idCard:data.idCard,
+                        // idCardType:data.idCardType,
+                        // idCard:data.idCard,
+                        id:data.id,
                         codeType:'0'
                     }
                 }).then(res =>{
@@ -100,7 +101,6 @@
                 })
             },
             clickrefresh(){
-                console.log(">>>>>>>>>")
                 this.refresh()
             },
             begininterval(){

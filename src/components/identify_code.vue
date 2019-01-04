@@ -1,13 +1,14 @@
 <template>
   <div class="identify">
-    <van-popup v-model="isShow" class="margin-top100" style="width:80%" :overlay="true" position="top" close-on-click-overlay @close="isShow=false">
+      <!-- -->
+    <van-popup v-model="isShow" class="margin-top100" style="width:80%" :overlay="true" position="top"  close-on-click-overlay  @close="isShow=false">
       <div class="text-align-center padding-top48  padding-left46 padding-bottom30">
         <i class="icon-close absolute top40 right40 color-999" @click="close"></i>
         <p class="font-size4 margin-bottom24 margin-top0 color-333">请输入图形验证码</p>
         <p style="color:#F6424B" class="padding10X">{{errmeaasge}}</p>
         <div class="code-content padding-top18">
           <img class="height100 code-img inline-block float-left" :src="codeImgUrl" />
-          <div @click="refreshCode" class="code-refresh float-left padding28X">
+          <div @click.stop="refreshCode" class="code-refresh float-left padding28X">
             <i class="icon-refresh font-size22 color-999"></i>
           </div>
         </div>
@@ -26,7 +27,7 @@
         <van-field v-model="codetext" autosize  ref="inputcode" @input.native="checkCode" type="password"/>
     </van-cell-group> -->
     <!-- <input @input="checkCode" style="position:fixed;top:0;left:0" type="number" maxlength="4" v-model="codes" :focus="isFocus" /> -->
-    <van-number-keyboard :z-index="3000" :show="isShow" extra-key="." close-button-text="完成"  @blur="isShow = false" @input="checkCode" @delete="onDelete" />
+    <van-number-keyboard :z-index="3000" :show="isShow" extra-key="." close-button-text="完成"   @input="checkCode" @delete="onDelete" @close="isShow=false"/>
   </div>
 </template>
 
