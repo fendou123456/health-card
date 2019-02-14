@@ -94,6 +94,7 @@ export const post = (option) => {
         postType = postResArraybuffer
     }
     let param = option.param || {}
+    param.source = cache.get('source')||''
     if (option.param) {
         if (typeof option.param === 'string') {
             param = option.param

@@ -1,7 +1,7 @@
 <template>
     <div class="bgcolor-white height100">
         <div class="flex-center margin-top60">
-            <div  style="width:133px;height:133px;"><vue-qr  :logoSrc="config.imagePath" :text="config.value" :size="133" :margin="0"></vue-qr></div> 
+            <div  style="width:200px;height:200px;"><vue-qr  :logoSrc="config.imagePath" :text="config.value" :size="200" :margin="0"></vue-qr></div> 
         </div>
         <div class="margin-top28 text-align-center margin-bottom20">就诊时出示此码，<span  @click="clickrefresh" class="color-blue">刷新</span></div>
         <section class="margin-right40">
@@ -120,7 +120,7 @@
                         id:data.id
                     }
                 }).then(res =>{
-                    this.$widget.alert(res.data.message,'').then(res =>{
+                    this.$widget.alert('删除电子健康卡成功','').then(res =>{
                         this.$router.push({path:'/cardList'})
                     }).catch(res =>{
 

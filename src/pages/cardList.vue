@@ -34,7 +34,8 @@ import { getjsSign , scanCode, wxConfig} from '@/utils/scanCode.js'
                projectId:'75029b79-488f-4005-831d-f5d9455fc68f',
                isLoading:false,
                nodata:null,
-               mainList:[]
+               mainList:[],
+               source:''
            }
         },
         methods:{
@@ -80,11 +81,14 @@ import { getjsSign , scanCode, wxConfig} from '@/utils/scanCode.js'
         mounted(){
             this.userId = this.$route.query.uid||this.$cache.get(this.$cacheKey.userId)
             this.openId = this.$route.query.openid||this.$cache.get(this.$cacheKey.openId)
-            console.log(">>>>>uid",this.$route.query.uid)
+            this.projectId =  this.$route.query.projectid||this.$cache.get(this.$cacheKey.projectId)
+            this.hospitalId =  this.$route.query.hospitalid||this.$cache.get(this.$cacheKey.hospitalId)
+            this.source =  this.$route.query.source||this.$cache.get(this.$cacheKey.source)
             this.$cache.set('userId',this.userId)
             this.$cache.set('openId',this.openId)
             this.$cache.set('hospitalId',this.hospitalId)
             this.$cache.set('projectId',this.projectId)
+            this.$cache.set('source',this.source)
             this.onRefresh()
             getjsSign()
         },

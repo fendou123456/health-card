@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
         '/api': {
-            target: 'https://xpeng90.zwjk.com',
+            target: 'https://paydownload-test.zwjk.com',
             changeOrigin: true, //是否跨域
             pathRewrite: {
                 '^/api': '' //需要rewrite重写的,
